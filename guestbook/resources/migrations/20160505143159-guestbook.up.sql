@@ -1,0 +1,6 @@
+CREATE TABLE guestbook (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(60),
+  message VARCHAR(200),
+  timestamp TIMESTAMP
+);
