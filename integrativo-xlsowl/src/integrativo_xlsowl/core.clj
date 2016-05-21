@@ -1,9 +1,11 @@
 (ns integrativo-xlsowl.core
   (:require [clojure.java.io :as io])
   (:require [dk.ative.docjure.spreadsheet :as xls])
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str])
+  (:require [clojure.math.combinatorics :as combo]))
 
 ;; (def xlsfile "/home/eudes/Downloads/Data_and_Generatorv13.xlsm")
+(def xls-file "/home/eudes/wars/integrativo-xlsowl/resources/Data_and_Generatorv13.xlsm")
 
 (def column-key-map 
   {"Protein" :protein-name
@@ -17,16 +19,24 @@
    "CellComponent" :cell-component
    "Comp" :cell-component})
 
-(defn derived-rows [wb rows]
-  
-  ;; (map (fn [x] (clojure.string/split x #";")) rows)
-)
 
-(defn import-file [xlsfile]
 
-  (let [initial-time-millis (System/currentTimeMillis)
-        wb (xls/load-workbook xlsfile)
-        final-data (->> (xls/select-sheet "final-data" wb)
+(defn split-data-values [data-list]
+  (map (fn [data-item]
+         (for [entry-key (keys data-item)
+               :let [splited-value (str/split (entry-key data-item) #";")]]
+           (map (partial hash-map entry-key) splited-value)))
+       data-list))
+
+(defn combine-data-values [data-list]
+  (map (fn [data-item]
+         (apply combo/cartesian-product data-item))
+       data-list))
+
+(defn combine-final-data [workbook]
+
+  (let [initial-time-millis (System/currentTimeMillis)        
+        final-data (->> (xls/select-sheet "final-data" workbook)
                         (xls/select-columns {:C :protein-name 
                                              :D :gene-name
                                              :E :organism
@@ -34,21 +44,22 @@
                                              :G :molecular-function
                                              :H :cell-component
                                              :L :description}))
-        owl-elements2 (->> (xls/select-sheet "owl-elements2" wb)
-                           (xls/select-columns {:A :id
-                                                :B :owl-axiom}))
-        sub-final-data (subvec final-data 7 8; 52
-                               )
-        sub-owl-elements2 (subvec owl-elements2 29 107)
-        ] 
+        ;; sub-final-data (subvec final-data 7 52)
+        ;; sub-final-data-splited (combine-data-values sub-final-data)
+]
 
-    (derived-rows wb sub-final-data)
-    ;; (println sub-final-data)
+    (-> final-data
+        (subvec 7 52)
+        split-data-values
+        combine-data-values)))
 
-))
 
-(import-file xlsfile)
+(combine-final-data (xls/load-workbook xls-file))
 
+;; sub-owl-elements2 (subvec owl-elements2 29 107)
+;; owl-elements2 (->> (xls/select-sheet "owl-elements2" workbook)
+;;                    (xls/select-columns {:A :id
+;;                                         :B :owl-axiom}))
 
 (defn -main
   "Application Entry Point"
@@ -57,4 +68,3 @@
   (if (.exists (io/file xlsfile))
     (import-file xlsfile)
     (println "File does not exists!")))
-)
