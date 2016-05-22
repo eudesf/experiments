@@ -96,14 +96,8 @@
 (defn -main []
   (let [wb (xls/load-workbook xls-file)]
     (->> 
-     ;; combine all final data values
      (combine-final-data wb)   
-     
-     ;; expand the varibles in the model with the final data
      (expand-model wb)         
-
      remove-duplicates
-
-     ;; write to file
      write-result!
      )))
