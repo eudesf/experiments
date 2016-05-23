@@ -25,7 +25,7 @@
 (defn split-data-values [data-list]
   (map (fn [data-item]
          (for [entry-key (keys data-item)
-               :let [splited-value (str/split (entry-key data-item) #";")]]
+               :let [splited-value (str/split (str (entry-key data-item)) #";")]]
            (map (partial hash-map entry-key) splited-value)))
        data-list))
 
@@ -42,7 +42,7 @@
                                              :F :biological-process
                                              :G :molecular-function
                                              :H :cell-component
-                                             :L :description}))]
+                                             :M :description}))]
 
     (-> final-data
         (subvec 7 52)
