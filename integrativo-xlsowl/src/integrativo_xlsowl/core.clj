@@ -4,7 +4,7 @@
   (:require [clojure.string :as str])
   (:require [clojure.math.combinatorics :as combo]))
 
-;; (def xls-file "/home/eudes/wars/integrativo-xlsowl/resources/Data_and_Generatorv13.xlsm")
+(def xls-file "resources/Data_and_Generatorv13.xlsm")
 
 (def expandmap 
   {:protein-name ["Protein"]
@@ -34,6 +34,9 @@
          (apply combo/cartesian-product data-item))
        data-list))
 
+(defn remove-empties [datamap-list]
+  (filter (fn [test-map] (not-any? #(or (nil? %) (= "" %)) (vals test-map))) test-map-list))
+
 (defn combine-final-data [workbook]
   (let [final-data (->> (xls/select-sheet "final-data" workbook)
                         (xls/select-columns {:C :protein-name 
@@ -50,6 +53,18 @@
         split-data-values
         combine-data-values
 )))
+
+(defn expand-model-item [modelmap datamap]
+  (reduce (fn [axiom-str datamap-key]
+            (reduce (fn [axiom-str column]
+                      (str/replace axiom-str
+                                   (re-pattern (str "\\$" column "\\$"))
+                                   (str/replace (datamap-key datamap) #"[^\w\d]" "_")))
+                    axiom-str
+                    (datamap-key expandmap)))
+          
+          (:owl-axiom modelmap)
+          (keys datamap)))
 
 (defn expand-model [workbook datamap-result]
   (let [modelmap-all (->> (xls/select-sheet "owl-elements2" workbook)
@@ -69,21 +84,7 @@
                  (expand-model-item modelmap)
                  (conj result))))))
 
-
-(defn expand-model-item [modelmap datamap]
-  (reduce (fn [axiom-str datamap-key]
-            (reduce (fn [axiom-str column]
-                      (str/replace axiom-str
-                                   (re-pattern (str "\\$" column "\\$"))
-                                   (str/replace (datamap-key datamap) #"[^\w\d]" "_")))
-                    axiom-str
-                    (datamap-key expandmap)))
-          
-          (:owl-axiom modelmap)
-          (keys datamap)))
-
-
-/(defn write-result! [result]
+(defn write-result! [result]
   (with-open [wtr (clojure.java.io/writer "result.owl")]
     (binding [*out* wtr]
       (doseq [result-item result]
