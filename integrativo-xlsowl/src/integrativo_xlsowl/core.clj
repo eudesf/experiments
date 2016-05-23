@@ -35,7 +35,7 @@
        data-list))
 
 (defn remove-empties [datamap-list]
-  (filter (fn [test-map] (not-any? #(or (nil? %) (= "" %)) (vals test-map))) test-map-list))
+  (filter (fn [datamap] (not-any? #(or (nil? %) (= "" %)) (vals datamap))) datamap-list))
 
 (defn combine-final-data [workbook]
   (let [final-data (->> (xls/select-sheet "final-data" workbook)
@@ -49,7 +49,8 @@
 
     (-> final-data
         (subvec 7 52)
-        (add-literals)
+        remove-empties
+        add-literals
         split-data-values
         combine-data-values
 )))
