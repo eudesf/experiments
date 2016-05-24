@@ -195,6 +195,9 @@
 
 <!--==== END OF HEADING ====-->
 
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_cytoplasm__GO_0005737_"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_gamma_lyase_and_protein_sulfhydration__GO_0044524_"/>
         <ObjectIntersectionOf>
@@ -512,6 +515,23 @@
     <Declaration>
         <Class IRI="Cystathionine_beta_synthase__EC_4_2_1_22__in_Homo_sapiens__Human__in_nucleolus__GO_0005730_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="S_adenosylmethionine_homocysteine_S_methyltransferase_activity__GO_0008898__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="S_adenosylmethionine_homocysteine_S_methyltransferase_activity__GO_0008898_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
+        <Class IRI="eye_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="response_to_nutrient_levels__GO_0031667_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
@@ -601,6 +621,22 @@
     <Declaration>
         <Class IRI="Methionine_synthase_in_Homo_sapiens__Human__in_pteridine_containing_compound_metabolic_process__GO_0042558_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__and_methionine_biosynthetic_process__GO_0009086_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                        <Class IRI="methionine_biosynthetic_process__GO_0009086_"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Fatty_Liver"/>
         <ObjectIntersectionOf>
@@ -743,6 +779,16 @@
         <Class IRI="Thoracolumbosacral_spina_bifida_aperta"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_methionine_biosynthetic_process__GO_0009086_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <Class IRI="methionine_biosynthetic_process__GO_0009086_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Thermolabile_Type_Mthfr_Deficiency_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
@@ -942,6 +988,22 @@
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Clear_cell_metastatic_renal_cell_carcinoma"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_Homocysteine"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.org/biotop/btl2.owl#Process"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                        <Class IRI="Homocysteine"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="nervous_system_development__GO_0007399__in_Homo_sapiens__Human__with_Methionine_synthase"/>
         <ObjectIntersectionOf>
             <Class IRI="nervous_system_development__GO_0007399_"/>
@@ -981,6 +1043,16 @@
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase_deficiency__MTHFRD__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_exocrine_pancreas_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="exocrine_pancreas_decreased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="L_cystine_L_cysteine_lyase__deaminating___GO_0044540__in_Rattus_norvegicus__Rat__with_Cystathionine_gamma_lyase"/>
         <ObjectIntersectionOf>
@@ -1041,6 +1113,9 @@
         <Class IRI="Homocystinuria"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_trunk_decreased_thickness"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="http://purl.org/biotop/btl2.owl#StructuredBiologicalEntity"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#PolyMolecularCompositeEntity"/>
@@ -1053,6 +1128,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Transitional_Cell_Carcinoma_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_notochord_increased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="Rattus_norvegicus__Rat_"/>
@@ -1068,6 +1146,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_methionine_biosynthetic_process__GO_0009086_"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Cystathionine_gamma_lyase_Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -1226,6 +1307,9 @@
         <Class IRI="small_molecule_metabolic_process__GO_0044281__in_Homo_sapiens__Human__with_Methionine_synthase"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__and_Homocysteine"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="MTR"/>
     </Declaration>
     <Declaration>
@@ -1234,6 +1318,16 @@
     <Declaration>
         <Class IRI="neuron_projection__GO_0043005__in_Homo_sapiens__Human_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <Class IRI="Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Hereditary_Nonpolyposis"/>
     </Declaration>
@@ -1291,6 +1385,10 @@
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__and_small_molecule_metabolic_process__GO_0044281_"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="intestine_decreased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <Declaration>
         <Class IRI="Nephrosclerosis"/>
     </Declaration>
@@ -1468,6 +1566,9 @@
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Rattus_norvegicus__Rat__in_one_carbon_metabolic_process__GO_0006730_"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_trunk_decreased_thickness_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Clear_cell_metastatic_renal_cell_carcinoma_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -1551,6 +1652,10 @@
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="Gastrointestinal_Stromal_Tumors"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="head_decreased_size"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
     <EquivalentClasses>
@@ -1713,6 +1818,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Amino_Acid_Metabolism_errors_and_Cystathionine_gamma_lyase_Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_pancreatic_B_cell_present_in_greater_numbers_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="Coronary_Artery_Disease_in_Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
@@ -2006,6 +2114,9 @@
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase_deficiency_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="intestine_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_small_molecule_metabolic_process__GO_0044281_"/>
         <ObjectIntersectionOf>
@@ -2186,6 +2297,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Cystathionine_beta_synthase__EC_4_2_1_22__in_Rattus_norvegicus__Rat__in_cytoplasm__GO_0005737_"/>
         <ObjectIntersectionOf>
@@ -2475,6 +2589,16 @@
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Cystathionine_gamma_lyase_and_cysteine_metabolic_process__GO_0006534_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="endocrine_pancreas_increased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="endocrine_pancreas_increased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Homo_sapiens__Human__in_cytosol__GO_0005829_"/>
         <ObjectIntersectionOf>
@@ -3249,6 +3373,16 @@
     <Declaration>
         <Class IRI="NONARTERITIC_ANTERIOR_ISCHEMIC_OPTIC_NEUROPATHY"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="trunk_decreased_thickness_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="trunk_decreased_thickness"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Homo_sapiens__Human__in_methionine_metabolic_process__GO_0006555_"/>
     </Declaration>
@@ -3373,6 +3507,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_endocrine_pancreas_increased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="regulation_of_cGMP_metabolic_process__GO_0030823__in_Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22_"/>
         <ObjectIntersectionOf>
@@ -3545,6 +3682,16 @@
         <Class IRI="Homo_sapiens__Human__with_Methionine_synthase_and_small_molecule_metabolic_process__GO_0044281_"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__and_cellular_nitrogen_compound_metabolic_process__GO_0034641_"/>
         <ObjectIntersectionOf>
             <Class IRI="Homo_sapiens__Human_"/>
@@ -3647,6 +3794,9 @@
     <Declaration>
         <Class IRI="Homocystinuria_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_eye_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Transitional_Cell_Carcinoma"/>
         <ObjectIntersectionOf>
@@ -3666,6 +3816,22 @@
     <Declaration>
         <Class IRI="cobalamin_binding__GO_0031419_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="bhmt_encoding_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="bhmt"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Encoding"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Upper_thoracic_spina_bifida_aperta_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
@@ -3728,6 +3894,16 @@
     <Declaration>
         <Class IRI="carbon_sulfur_lyase_activity__GO_0016846_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="cytoplasm__GO_0005737__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="cytoplasm__GO_0005737_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="http://purl.org/biotop/btl2.owl#Quality"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Particular"/>
@@ -4072,6 +4248,16 @@
         <Class IRI="Peripheral_Arterial_Disease"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_intestine_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="intestine_decreased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="sulfur_amino_acid_metabolic_process__GO_0000096__in_Homo_sapiens__Human__with_Cystathionine_gamma_lyase"/>
         <ObjectIntersectionOf>
             <Class IRI="sulfur_amino_acid_metabolic_process__GO_0000096_"/>
@@ -4198,6 +4384,9 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <Declaration>
+        <Class IRI="pancreatic_B_cell_present_in_greater_numbers"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Homocysteine_in_Homo_sapiens__Human__with_Methionine_synthase"/>
     </Declaration>
     <Declaration>
@@ -4241,6 +4430,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Homocystinuria_in_Homo_sapiens__Human__with_Methionine_synthase_Dysfunctional"/>
     </Declaration>
@@ -4667,6 +4859,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Squamous_Cell_Carcinoma_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -4752,6 +4947,22 @@
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_response_to_nutrient_levels__GO_0031667_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_head_decreased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="head_decreased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Homo_sapiens__Human__with_Central_nervous_system_tumour_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -4893,6 +5104,16 @@
         <Class IRI="Encoding"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Process"/>
     </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_eye_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="eye_decreased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Thoracolumbosacral_spina_bifida_aperta"/>
     </Declaration>
@@ -5072,6 +5293,9 @@
         <Class IRI="http://purl.obolibrary.org/obo/GO_0003674"/>
     </SubClassOf>
     <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_intestine_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Homo_sapiens__Human__with_Thoracolumbosacral_spina_bifida_aperta"/>
     </Declaration>
     <Declaration>
@@ -5216,6 +5440,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_exocrine_pancreas_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="http://purl.obolibrary.org/obo/PR_000018263"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Compound"/>
@@ -5244,6 +5471,28 @@
     <Declaration>
         <Class IRI="tetrahydrofolate_interconversion__GO_0035999__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__and_Homocysteine"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://purl.org/biotop/btl2.owl#Process"/>
+                            <ObjectSomeValuesFrom>
+                                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                                <Class IRI="Homocysteine"/>
+                            </ObjectSomeValuesFrom>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Albuminuria"/>
     </Declaration>
@@ -5329,6 +5578,19 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_eye_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_endocrine_pancreas_increased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="endocrine_pancreas_increased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
         <Class IRI="Sudden_Hearing_Loss_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
     <Declaration>
@@ -5367,6 +5629,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="cytoplasm__GO_0005737__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="Cervicothoracic_spina_bifida_cystica"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
@@ -5406,6 +5671,16 @@
                         <Class IRI="homocysteine_metabolic_process__GO_0050667_"/>
                     </ObjectSomeValuesFrom>
                 </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="notochord_increased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="notochord_increased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -5471,6 +5746,19 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="exocrine_pancreas_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="exocrine_pancreas_decreased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_head_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="water_soluble_vitamin_metabolic_process__GO_0006767__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
         <ObjectIntersectionOf>
@@ -5881,6 +6169,22 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_pancreatic_B_cell_present_in_greater_numbers"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="pancreatic_B_cell_present_in_greater_numbers"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="ubiquitin_protein_ligase_binding__GO_0031625__in_Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22_"/>
         <ObjectIntersectionOf>
             <Class IRI="ubiquitin_protein_ligase_binding__GO_0031625_"/>
@@ -5949,6 +6253,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="intestine_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Cystathininuria"/>
     </Declaration>
@@ -6301,6 +6608,10 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="exocrine_pancreas_decreased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <EquivalentClasses>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Homo_sapiens__Human__with_Haematopoietic_and_lymphoid_tissue_tumour"/>
         <ObjectIntersectionOf>
@@ -6701,6 +7012,10 @@
         <Class IRI="response_to_amino_acid__GO_0043200_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <Class IRI="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+    </SubClassOf>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_gamma_lyase_and_hydrogen_sulfide_biosynthetic_process__GO_0070814_"/>
         <ObjectIntersectionOf>
@@ -6863,6 +7178,16 @@
         <Class IRI="Large_intestine_tumour_in_Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_head_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="head_decreased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_cysteine_biosynthetic_process_via_cystathionine__GO_0019343_"/>
         <ObjectIntersectionOf>
             <Class IRI="Homo_sapiens__Human_"/>
@@ -6945,6 +7270,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Pancreatic_Neoplasms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_endocrine_pancreas_increased_size"/>
     </Declaration>
     <Declaration>
         <Class IRI="Cystathionine_gamma_lyase_Dysfunctional_in_Rattus_norvegicus__Rat__with_Gamma_cystathionase_deficiency"/>
@@ -7055,6 +7383,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="Isolated_anencephaly_exencephaly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_notochord_increased_size"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="Homocystinuria_in_Homo_sapiens__Human__with_Methionine_synthase_Dysfunctional"/>
@@ -7251,6 +7582,9 @@
         <Class IRI="one_carbon_metabolic_process__GO_0006730__in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
     <Declaration>
+        <Class IRI="endocrine_pancreas_increased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="BHMT"/>
     </Declaration>
     <EquivalentClasses>
@@ -7392,6 +7726,9 @@
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
     <Declaration>
+        <Class IRI="betaine_homocysteine_S_methyltransferase_activity__GO_0047150__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Homo_sapiens__Human__with_nucleolus__GO_0005730_"/>
     </Declaration>
     <Declaration>
@@ -7442,6 +7779,22 @@
         <Class IRI="vitamin_metabolic_process__GO_0006766_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_eye_decreased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="eye_decreased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="methylation__GO_0032259_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
@@ -7450,6 +7803,9 @@
         <Class IRI="methylenetetrahydrofolate_reductase__NAD_P_H__activity__GO_0004489_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0003674"/>
     </SubClassOf>
+    <Declaration>
+        <Class IRI="liver_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Neurodegeneration_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -7476,6 +7832,10 @@
     <Declaration>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Homo_sapiens__Human__with_Pancreas_tumour"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="pancreatic_B_cell_present_in_greater_numbers"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <Declaration>
         <Class IRI="Cystathionine_beta_synthase__EC_4_2_1_22__in_Homo_sapiens__Human__in_small_molecule_metabolic_process__GO_0044281_"/>
     </Declaration>
@@ -7487,6 +7847,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Thrombotic_Microangiopathies_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="bhmt_encoding_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
     </Declaration>
     <Declaration>
         <Class IRI="modified_amino_acid_binding__GO_0072341__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
@@ -7606,6 +7969,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="zinc_ion_binding__GO_0008270__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Anterior_Wall_Myocardial_Infarction"/>
     </Declaration>
@@ -7867,6 +8233,9 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <Declaration>
+        <Class IRI="Homocysteine_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="endoplasmic_reticulum_unfolded_protein_response__GO_0030968_"/>
     </Declaration>
     <SubClassOf>
@@ -8126,6 +8495,16 @@
         <Class IRI="Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_cysteine_biosynthetic_process_via_cystathionine__GO_0019343_"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_liver_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="liver_decreased_size"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Peripheral_Arterial_Disease_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
             <Class IRI="Peripheral_Arterial_Disease"/>
@@ -8138,6 +8517,22 @@
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Migraine_with_Aura_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_liver_decreased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="liver_decreased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="sulfur_amino_acid_catabolic_process__GO_0000098__in_Homo_sapiens__Human__with_Cystathionine_gamma_lyase"/>
     </Declaration>
@@ -8276,6 +8671,22 @@
                     <ObjectSomeValuesFrom>
                         <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
                         <Class IRI="heterochromatin_maintenance__GO_0070829_"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Homocysteine_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Homocysteine_in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://purl.org/biotop/btl2.owl#Process"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
                     </ObjectSomeValuesFrom>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
@@ -8432,6 +8843,16 @@
     <Declaration>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Homo_sapiens__Human__with_Endometrium_tumour"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="liver_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="liver_decreased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Homo_sapiens__Human__in_extracellular_vesicular_exosome__GO_0070062_"/>
         <ObjectIntersectionOf>
@@ -8671,6 +9092,9 @@
         <Class IRI="endoplasmic_reticulum_unfolded_protein_response__GO_0030968_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
+    <Declaration>
+        <Class IRI="pancreatic_B_cell_present_in_greater_numbers_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Rattus_norvegicus__Rat__in_response_to_interleukin_1__GO_0070555_"/>
         <ObjectIntersectionOf>
@@ -8875,6 +9299,19 @@
         <Class IRI="Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__and_regulation_of_histone_methylation__GO_0031060_"/>
     </Declaration>
     <Declaration>
+        <Class IRI="methionine_biosynthetic_process__GO_0009086__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="bhmt_encoding_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="bhmt_encoding_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
         <Class IRI="breast_tumour_in_Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
     </Declaration>
     <EquivalentClasses>
@@ -8904,6 +9341,22 @@
     <Declaration>
         <Class IRI="S_adenosylmethionine_homocysteine_S_methyltransferase_activity__GO_0008898__in_Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_endocrine_pancreas_increased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="endocrine_pancreas_increased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Homocystinuria_in_Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -8966,6 +9419,22 @@
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Homo_sapiens__Human__in_regulation_of_histone_methylation__GO_0031060_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_notochord_increased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="notochord_increased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="tetrahydrofolate_metabolic_process__GO_0046653_"/>
     </Declaration>
@@ -9237,6 +9706,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="trunk_decreased_thickness"/>
+    </Declaration>
     <Declaration>
         <Class IRI="homocysteine_metabolic_process__GO_0050667__in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
@@ -9612,6 +10084,22 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_trunk_decreased_thickness"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="trunk_decreased_thickness"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="response_to_drug__GO_0042493__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
@@ -9730,6 +10218,9 @@
     <Declaration>
         <Class IRI="extracellular_vesicular_exosome__GO_0070062__in_Rattus_norvegicus__Rat__with_Cystathionine_gamma_lyase"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_exocrine_pancreas_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Homo_sapiens__Human__with_Homocystinuria"/>
         <ObjectIntersectionOf>
@@ -9775,6 +10266,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_intestine_decreased_size"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Homo_sapiens__Human__in_methionine_biosynthetic_process__GO_0009086_"/>
     </Declaration>
@@ -9839,6 +10333,22 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_intestine_decreased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="intestine_decreased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Neurodegeneration"/>
     </Declaration>
@@ -9896,6 +10406,10 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="trunk_decreased_thickness"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <Declaration>
         <Class IRI="Methionine_synthase_in_Homo_sapiens__Human__in_small_molecule_metabolic_process__GO_0044281_"/>
     </Declaration>
@@ -9952,6 +10466,16 @@
     <Declaration>
         <Class IRI="Central_nervous_system_tumour"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_pancreatic_B_cell_present_in_greater_numbers_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="pancreatic_B_cell_present_in_greater_numbers"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Hearing_Loss"/>
     </Declaration>
@@ -10343,6 +10867,16 @@
         <Class IRI="endochondral_ossification__GO_0001958_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_cytoplasm__GO_0005737_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <Class IRI="cytoplasm__GO_0005737_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Albuminuria_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
@@ -10361,6 +10895,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="response_to_folic_acid__GO_0051593__in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Homocysteine_in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="homocysteine_metabolic_process__GO_0050667__in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
@@ -10421,9 +10958,27 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="zinc_ion_binding__GO_0008270__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="zinc_ion_binding__GO_0008270_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Methionine_synthase_and_cellular_nitrogen_compound_metabolic_process__GO_0034641_"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="eye_decreased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <EquivalentClasses>
         <Class IRI="metal_ion_binding__GO_0046872__in_Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22_"/>
         <ObjectIntersectionOf>
@@ -10457,6 +11012,16 @@
                         <Class IRI="superoxide_metabolic_process__GO_0006801_"/>
                     </ObjectSomeValuesFrom>
                 </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Homocysteine_in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Homocysteine"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -10629,9 +11194,23 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="intestine_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="intestine_decreased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="cytosol__GO_0005829__in_Homo_sapiens__Human_"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="bhmt"/>
+        <Class IRI="http://purl.obolibrary.org/obo/SO_0001217"/>
+    </SubClassOf>
     <EquivalentClasses>
         <Class IRI="cysteine_biosynthetic_process_via_cystathionine__GO_0019343__in_Homo_sapiens__Human__with_Cystathionine_beta_synthase__EC_4_2_1_22_"/>
         <ObjectIntersectionOf>
@@ -10816,6 +11395,20 @@
                         <Class IRI="maternal_process_involved_in_female_pregnancy__GO_0060135_"/>
                     </ObjectSomeValuesFrom>
                 </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="betaine_homocysteine_S_methyltransferase_activity__GO_0047150__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="betaine_homocysteine_S_methyltransferase_activity__GO_0047150_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -11341,6 +11934,9 @@
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
     <Declaration>
+        <Class IRI="notochord_increased_size"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="heterochromatin_maintenance__GO_0070829__in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
     <Declaration>
@@ -11857,6 +12453,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_pancreatic_B_cell_present_in_greater_numbers"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="Chronic_Mesangial_Proliferative_Glomerulonephritis"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
@@ -11980,6 +12579,9 @@
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Homo_sapiens__Human__in_amino_acid_betaine_metabolic_process__GO_0006577_"/>
     </Declaration>
     <Declaration>
+        <Class IRI="endocrine_pancreas_increased_size"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Cystathionine_gamma_lyase_in_Homo_sapiens__Human__in_cellular_nitrogen_compound_metabolic_process__GO_0034641_"/>
     </Declaration>
     <Declaration>
@@ -11995,6 +12597,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_liver_decreased_size"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="response_to_nutrient_levels__GO_0031667__in_Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22_"/>
         <ObjectIntersectionOf>
@@ -12052,6 +12657,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__and_methionine_biosynthetic_process__GO_0009086_"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Homo_sapiens__Human_"/>
     </Declaration>
@@ -12448,6 +13056,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Heat_Stroke"/>
         <ObjectIntersectionOf>
             <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
@@ -12466,6 +13084,16 @@
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_protein_complex__GO_0043234_"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_trunk_decreased_thickness_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="trunk_decreased_thickness"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="Cystathionine_gamma_lyase_Dysfunctional_in_Rattus_norvegicus__Rat_"/>
         <ObjectIntersectionOf>
@@ -12538,6 +13166,12 @@
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__in_Homo_sapiens__Human__in_folic_acid_metabolic_process__GO_0046655_"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="exocrine_pancreas_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="trunk_decreased_thickness_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="L_methionine_salvage__GO_0071267__in_Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
         <ObjectIntersectionOf>
@@ -12570,6 +13204,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="Liver_Neoplasms_in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
     </Declaration>
     <Declaration>
         <Class IRI="sulfur_amino_acid_metabolic_process__GO_0000096__in_Homo_sapiens__Human__with_Methionine_synthase"/>
@@ -12676,6 +13313,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Cataract_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="exocrine_pancreas_decreased_size"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="Central_nervous_system_tumour"/>
@@ -12794,6 +13434,9 @@
         <Class IRI="nervous_system_development__GO_0007399__in_Homo_sapiens__Human__with_Methionine_synthase"/>
     </Declaration>
     <Declaration>
+        <Class IRI="bhmt_encoding_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="methylenetetrahydrofolate_reductase__NAD_P_H__activity__GO_0004489_"/>
     </Declaration>
     <SubClassOf>
@@ -12885,8 +13528,24 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <Declaration>
+        <Class IRI="head_decreased_size"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Homo_sapiens__Human__with_Kidney_tumour"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="notochord_increased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="cytoplasm__GO_0005737__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="cytoplasm__GO_0005737__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <Declaration>
         <Class IRI="Angle_Closure_Glaucoma"/>
     </Declaration>
@@ -12977,6 +13636,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_liver_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Hearing_Loss_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
@@ -13089,6 +13751,9 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Methionine_synthase_and_methionine_biosynthetic_process__GO_0009086_"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="eye_decreased_size"/>
     </Declaration>
     <Declaration>
         <Class IRI="Homo_sapiens__Human__with_Methionine_synthase_and_xenobiotic_metabolic_process__GO_0006805_"/>
@@ -13280,8 +13945,15 @@
         <Class IRI="Migraine_Disorders"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="notochord_increased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <Declaration>
         <Class IRI="cellular_nitrogen_compound_metabolic_process__GO_0034641_"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="cytoplasm__GO_0005737__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
     </Declaration>
     <Declaration>
         <Class IRI="Clear_cell_metastatic_renal_cell_carcinoma"/>
@@ -13344,6 +14016,16 @@
         <Class IRI="Upper_thoracic_spina_bifida_cystica"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
     </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="pancreatic_B_cell_present_in_greater_numbers_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="pancreatic_B_cell_present_in_greater_numbers"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="Thrombophilia"/>
         <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
@@ -13442,6 +14124,10 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="endocrine_pancreas_increased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <Declaration>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Homo_sapiens__Human__in_amino_acid_betaine_catabolic_process__GO_0006579_"/>
     </Declaration>
@@ -13501,6 +14187,12 @@
     <Declaration>
         <Class IRI="nucleolus__GO_0005730__in_Homo_sapiens__Human_"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="bhmt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="head_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Homo_sapiens__Human__in_amino_acid_betaine_metabolic_process__GO_0006577_"/>
         <ObjectIntersectionOf>
@@ -13557,6 +14249,16 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
                 <Class IRI="Megaloblastic_anemia"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_cytoplasm__GO_0005737_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="cytoplasm__GO_0005737_"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -13680,6 +14382,16 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
                 <Class IRI="Osteosarcoma"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_notochord_increased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                <Class IRI="notochord_increased_size"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -13878,6 +14590,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio__in_Homocysteine"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_cysteine_biosynthetic_process_via_cystathionine__GO_0019343_"/>
         <ObjectIntersectionOf>
@@ -14019,6 +14734,9 @@
     <Declaration>
         <Class IRI="cytosol__GO_0005829__in_Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20_"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="liver_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Migraine_Disorders_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
@@ -14076,6 +14794,22 @@
         <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Homo_sapiens__Human_"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_exocrine_pancreas_decreased_size"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#includes"/>
+                        <Class IRI="exocrine_pancreas_decreased_size"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Angle_Closure_Glaucoma_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
         <ObjectIntersectionOf>
             <Class IRI="Rattus_norvegicus__Rat__with_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
@@ -14124,6 +14858,16 @@
         <Class IRI="Rattus_norvegicus__Rat__with_Clear_cell_metastatic_renal_cell_carcinoma_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="Homo_sapiens__Human__with_Liver_tumour_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
         <ObjectIntersectionOf>
             <Class IRI="Homo_sapiens__Human__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
@@ -14133,6 +14877,9 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_head_decreased_size_and_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Homo_sapiens__Human__with_Upper_thoracic_spina_bifida_aperta"/>
         <ObjectIntersectionOf>
@@ -14179,6 +14926,20 @@
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
                 <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_gamma_lyase_Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="methionine_biosynthetic_process__GO_0009086__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+        <ObjectIntersectionOf>
+            <Class IRI="methionine_biosynthetic_process__GO_0009086_"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -14312,6 +15073,19 @@
     </EquivalentClasses>
     <Declaration>
         <Class IRI="xenobiotic_metabolic_process__GO_0006805__in_Homo_sapiens__Human__with_Methionine_synthase"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="eye_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="eye_decreased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
+        <Class IRI="Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__in_Danio_rerio__Zebrafish___Brachydanio_rerio_"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Rattus_norvegicus__Rat__with_Chronic_Renal_Insufficiency"/>
@@ -14458,6 +15232,9 @@
         <Class IRI="protein_methylation__GO_0006479_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
     </SubClassOf>
+    <Declaration>
+        <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_cytoplasm__GO_0005737_"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="methionine_biosynthetic_process__GO_0009086_"/>
         <Class IRI="http://purl.obolibrary.org/obo/GO_0008150"/>
@@ -14690,6 +15467,10 @@
     <Declaration>
         <Class IRI="cellular_amino_acid_metabolic_process__GO_0006520_"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="liver_decreased_size"/>
+        <Class IRI="http://purl.org/biotop/btl2.owl#Situation"/>
+    </SubClassOf>
     <EquivalentClasses>
         <Class IRI="Rattus_norvegicus__Rat__with_Cystathionine_beta_synthase__EC_4_2_1_22__and_transsulfuration__GO_0019346_"/>
         <ObjectIntersectionOf>
@@ -14711,6 +15492,19 @@
     </Declaration>
     <Declaration>
         <Class IRI="Rattus_norvegicus__Rat__with_Sudden_Hearing_Loss_and_Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="head_decreased_size_in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+        <ObjectIntersectionOf>
+            <Class IRI="head_decreased_size"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <Class IRI="Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5__Dysfunctional"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <Declaration>
+        <Class IRI="S_adenosylmethionine_homocysteine_S_methyltransferase_activity__GO_0008898__in_Danio_rerio__Zebrafish___Brachydanio_rerio__with_Betaine__homocysteine_S_methyltransferase_1__EC_2_1_1_5_"/>
     </Declaration>
     <Declaration>
         <Class IRI="Methylenetetrahydrofolate_reductase__EC_1_5_1_20__Dysfunctional_in_Homo_sapiens__Human__with_Methylenetetrahydrofolate_reductase_deficiency__MTHFRD_"/>
