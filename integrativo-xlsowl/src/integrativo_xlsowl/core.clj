@@ -14,7 +14,7 @@
    :biological-process ["BioProcess" "BiologicalProcess"]
    :molecular-function ["MolecularFunction" "MolFunc"]
    :cell-component ["CellComponent" "Comp"]
-   :description ["Situation"]
+   :phenotype ["Situation"]
    :molecule ["Molecule"]})
 
 (def literal-expandmap 
@@ -48,7 +48,7 @@
                                              :F :biological-process
                                              :G :molecular-function
                                              :H :cell-component
-                                             :M :description}))]
+                                             :M :phenotype}))]
 
     (-> final-data
         (subvec 
