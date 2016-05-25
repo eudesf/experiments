@@ -35,9 +35,6 @@
          (apply combo/cartesian-product data-item))
        data-list))
 
-(defn remove-empties [datamap-list]
-  (filter (fn [datamap] (not-any? #(or (nil? %) (= "" %)) (vals datamap))) datamap-list))
-
 (defn combine-final-data [workbook]
   (let [final-data (->> (xls/select-sheet 
                          (get-in conf [:final-data :tab-name] "final-data") 
@@ -54,20 +51,29 @@
         (subvec 
          (get-in conf [:final-data :begin-line] 7) 
          (inc (get-in conf [:final-data :end-line] 52)))
-        remove-empties
         add-literals
         split-data-values
         combine-data-values
 )))
 
+(defn param-pattern [param-name] (re-pattern (str "\\$" param-name "\\$")))
+
 (defn expand-model-item [modelmap datamap]
   (reduce (fn [axiom-str datamap-key]
-            (reduce (fn [axiom-str column]
-                      (str/replace axiom-str
-                                   (re-pattern (str "\\$" column "\\$"))
-                                   (str/replace (datamap-key datamap) #"[^\w\d]" "_")))
-                    axiom-str
-                    (datamap-key expandmap)))
+            (let [param-names (datamap-key expandmap)  
+                  param-value (datamap-key datamap)]
+              
+              (if (and (or (= "" param-value) (nil? param-value)) 
+                       (some #(re-find (param-pattern %) axiom-str) param-names))
+                
+                "" ;; ignoring axiom with empty param
+
+                (reduce (fn [axiom-str param-name]
+                          (str/replace axiom-str 
+                                       (param-pattern param-name)
+                                       (str/replace param-value #"[^\w\d]" "_")))
+                        axiom-str
+                        param-names))))
           
           (:owl-axiom modelmap)
           (keys datamap)))
