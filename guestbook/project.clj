@@ -26,20 +26,36 @@
                  [luminus-migrations "0.1.0"]
                  [conman "0.4.6"]
                  [com.h2database/h2 "1.4.191"]
-                 [luminus-log4j "0.1.3"]]
+                 [luminus-log4j "0.1.3"]
+                 [org.clojure/clojurescript "1.7.228" :scope "provided"]
+                 [reagent "0.5.1"]]
 
   :min-lein-version "2.0.0"
 
   :jvm-opts ["-server" "-Dconf=.lein-env"]
   :source-paths ["src/clj"]
-  :resource-paths ["resources"]
+  :resource-paths ["resources" "target/cljsbuild"]
 
   :main guestbook.core
   :migratus {:store :database :db ~(get (System/getenv) "DATABASE_URL")}
 
   :plugins [[lein-cprop "1.0.1"]
-            [migratus-lein "0.2.6"]]
+            [migratus-lein "0.2.6"]
+            [lein-cljsbuild "1.1.1"]]
   :target-path "target/%s/"
+  :cljsbuild
+  {:builds {:app {:source-paths ["src/cljs"]
+                  :compiler {:output-to "target/cljsbuild/public/js/app.js"
+                             :output-dir "target/cljsbuild/public/js/out"
+                             :main "guestbook/core"
+                             :asset-path "/js/out"
+                             :optimizations :none
+                             :source-map true
+                             :pretty-print true}}}}
+  :clean-targets ^{:protect false}
+  [:target-path 
+   [:cljsbuild :builds :app :compiler :output-dir]
+   [:cljsbuild :builds :app :compiler :output-to]]
   :profiles
   {:uberjar {:omit-source true
              
