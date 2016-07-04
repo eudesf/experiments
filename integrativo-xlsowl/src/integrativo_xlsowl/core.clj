@@ -21,7 +21,8 @@
   {:molecule "Homocysteine"})
 
 (defn add-literals [data-list]
-  (map (partial merge literal-expandmap) data-list))
+  (map #(merge {:hash %} %) 
+       (map (partial merge literal-expandmap) data-list)))
 
 (defn split-data-values [data-list]
   (map (fn [data-item]
@@ -101,6 +102,15 @@
                  (expand-model-item modelmap)
                  (conj result))))))
 
+(defn ppmap
+  "Partitioned pmap, for grouping map ops together to make parallel
+  overhead worthwhile"
+  [grain-size f & colls]
+  (apply concat
+   (apply pmap
+          (fn [& pgroups] (doall (apply map f pgroups)))
+          (map (partial partition-all grain-size) colls))))
+
 (defn write-result! [result]
   (with-open [wtr (clojure.java.io/writer "result.owl")]
     (binding [*out* wtr]
@@ -108,15 +118,24 @@
         (apply println result-item))
       (println "\n</Ontology>"))))
 
+(def hashes-read (atom #{}))
+
 (defn remove-duplicates [result]
-  (cons (first result) (set (rest result))))
+  (remove nil?
+          (map (fn [x] 
+                 (if (contains? @hashes-read x) 
+                   nil
+                   (do (swap! hashes-read conj x) x))) result)) 
+  )
 
 (defn -main []
   (let [wb (xls/load-workbook 
             (get conf :xls-file "resources/Data_and_Generatorv13.xlsm"))]
-    (->> 
-     (combine-final-data wb)   
-     (expand-model wb)         
-     remove-duplicates
-     write-result!
-     )))
+
+    (time (dorun 
+           (->> 
+            (combine-final-data wb)   
+            (expand-model wb)         
+            ; remove-duplicates
+            write-result!
+            )))))
