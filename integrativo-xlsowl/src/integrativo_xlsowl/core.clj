@@ -153,8 +153,8 @@
 
   (time (do (with-open [wtr (clojure.java.io/writer "result.owl")]
               (binding [*out* wtr]
-                (println (:model-heading xls-data))
-                (println "\\s")
+                (apply println (:model-heading xls-data))
+                (println)
                 (println "\n\n<!--==== END OF HEADING ====-->\n")
 
                 (loop [item-hashes #{}]

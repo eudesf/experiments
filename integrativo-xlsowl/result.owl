@@ -1,4 +1,4 @@
-(<?xml version="1.0"?>
+<?xml version="1.0"?>
 
 
 <!DOCTYPE Ontology [
@@ -164,8 +164,8 @@
         <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isPartOf"/>
     </Declaration>     <Declaration>
         <ObjectProperty IRI="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
-    </Declaration>)
-\s
+    </Declaration>
+
 
 
 <!--==== END OF HEADING ====-->
