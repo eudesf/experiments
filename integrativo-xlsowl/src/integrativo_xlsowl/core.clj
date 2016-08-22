@@ -81,39 +81,6 @@
           (keys datamap)))
 
 
-#_(defn expand-model [workbook datamap-result]
-  (let [modelmap-all (->> (xls/select-sheet
-                           (get-in conf [:owl-elements :tab-name] "owl-elements2") workbook)
-                           (xls/select-columns {:B :owl-axiom}))
-        modelmap-body (subvec modelmap-all
-                              (get-in conf [:owl-elements :body :begin-line] 29)
-                              (inc (get-in conf [:owl-elements :body :end-line] 107)))
-        modelmap-heading (subvec modelmap-all
-                              (get-in conf [:owl-elements :heading :begin-line] 1)
-                              (inc (get-in conf [:owl-elements :heading :end-line] 29)))
-        model-heading (map :owl-axiom modelmap-heading)]
-
-    (cons [(str/join "\n" model-heading)
-           "\n\n<!--==== END OF HEADING ====-->\n"]
-          (for [datamap-list datamap-result
-                datamap-item datamap-list
-                modelmap modelmap-body
-                :let [result []]]
-
-            (->> (reduce merge datamap-item)
-                 (expand-model-item modelmap)
-                 (conj result))))))
-
-#_(defn write-result! [result]
-  (with-open [wtr (clojure.java.io/writer "result.owl")]
-    (binding [*out* wtr]
-      (doseq [result-item result]
-        (apply println result-item))
-      (println "\n</Ontology>"))))
-
-#_(defn remove-duplicates [result]
-  (cons (first result) (set (rest result))))
-
 (def xls-data
   (let  [workbook (xls/load-workbook (get conf :xls-file "resources/Data_and_Generatorv13.xlsm"))
 
@@ -134,13 +101,12 @@
 (def ch-datamap-expanded (chan 10))
 
 (defn -main []
-  (go (let [final-data-combined (combine-final-data (:workbook xls-data))
-            final-data-merged   (reduce merge final-data-combined)]
-
-        (doseq [final-data final-data-merged]
-          (doseq [final-data-item final-data]
-            (>! ch-final-data (into {}  final-data-item)))))
+  (go (let [final-data-combined (combine-final-data (:workbook xls-data))]
+        (doseq [sublist1 final-data-combined]
+          (doseq [sublist2 sublist1]
+            (>! ch-final-data (reduce merge sublist2)))))
       (async/close! ch-final-data))
+
 
   (go-loop []
     (if-let [final-data (<! ch-final-data)]
@@ -149,6 +115,7 @@
           (>! ch-datamap-expanded (expand-model-item modelmap-body final-data)))
         (recur))
       (async/close! ch-datamap-expanded)))
+
 
 
   (time (do (with-open [wtr (clojure.java.io/writer "result.owl")]
@@ -166,13 +133,4 @@
                           (println datamap-expanded)
                           (recur (conj item-hashes item-hash)))))))
                 (println "\n</Ontology>")))
-            (println)))
-
-  #_(->>
-          (combine-final-data wb)
-          (expand-model wb)
-          remove-duplicates
-          write-result!
-          )
-
-)
+            (println))))
