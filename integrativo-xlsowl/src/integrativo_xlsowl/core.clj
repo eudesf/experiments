@@ -97,8 +97,17 @@
     (keyword-map workbook modelmap-body model-heading)))
 
 
-(def ch-final-data (chan 10))
-(def ch-datamap-expanded (chan 10))
+(def ch-final-data (chan 2000))
+(def ch-datamap-expanded (chan 2000))
+
+(defn handle-combined-data []
+  (go-loop []
+    (if-let [final-data (<! ch-final-data)]
+      (do
+        (doseq [modelmap-body (:modelmap-body xls-data)]
+          (>! ch-datamap-expanded (expand-model-item modelmap-body final-data)))
+        (recur))
+      (async/close! ch-datamap-expanded))))
 
 (defn -main []
   (go (let [final-data-combined (combine-final-data (:workbook xls-data))]
@@ -107,16 +116,7 @@
             (>! ch-final-data (reduce merge sublist2)))))
       (async/close! ch-final-data))
 
-
-  (go-loop []
-    (if-let [final-data (<! ch-final-data)]
-      (do
-        (doseq [modelmap-body (:modelmap-body xls-data)]
-          (>! ch-datamap-expanded (expand-model-item modelmap-body final-data)))
-        (recur))
-      (async/close! ch-datamap-expanded)))
-
-
+  (dorun (repeatedly 10 handle-combined-data))
 
   (time (do (with-open [wtr (clojure.java.io/writer "result.owl")]
               (binding [*out* wtr]
